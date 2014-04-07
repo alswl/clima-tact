@@ -22,6 +22,9 @@
 		92CD7B2E18F16D2D002F69C7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CD7B1218F16D2D002F69C7 /* CoreData.framework */; };
 		92CD7B3618F16D2D002F69C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CD7B3418F16D2D002F69C7 /* InfoPlist.strings */; };
 		92CD7B3818F16D2D002F69C7 /* ClimaTactTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CD7B3718F16D2D002F69C7 /* ClimaTactTests.m */; };
+		92CD7B6B18F2B159002F69C7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CD7B6A18F2B159002F69C7 /* MainStoryboard.storyboard */; };
+		92CD7B7118F2C04D002F69C7 /* CTListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CD7B7018F2C04D002F69C7 /* CTListTableViewController.m */; };
+		92CD7B7418F2C11A002F69C7 /* CTTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CD7B7318F2C11A002F69C7 /* CTTransaction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		92CD7B3318F16D2D002F69C7 /* ClimaTactTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClimaTactTests-Info.plist"; sourceTree = "<group>"; };
 		92CD7B3518F16D2D002F69C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92CD7B3718F16D2D002F69C7 /* ClimaTactTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClimaTactTests.m; sourceTree = "<group>"; };
+		92CD7B6A18F2B159002F69C7 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../Controllers/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		92CD7B6F18F2C04D002F69C7 /* CTListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTListTableViewController.h; sourceTree = "<group>"; };
+		92CD7B7018F2C04D002F69C7 /* CTListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTListTableViewController.m; sourceTree = "<group>"; };
+		92CD7B7218F2C11A002F69C7 /* CTTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTransaction.h; sourceTree = "<group>"; };
+		92CD7B7318F2C11A002F69C7 /* CTTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTransaction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 		92CD7B0018F16D2D002F69C7 = {
 			isa = PBXGroup;
 			children = (
+				92CD7B6518F2AEA4002F69C7 /* Resources */,
 				92CD7B1418F16D2D002F69C7 /* ClimaTact */,
 				92CD7B3118F16D2D002F69C7 /* ClimaTactTests */,
 				92CD7B0B18F16D2D002F69C7 /* Frameworks */,
@@ -115,6 +124,10 @@
 		92CD7B1418F16D2D002F69C7 /* ClimaTact */ = {
 			isa = PBXGroup;
 			children = (
+				92CD7B6618F2AF5B002F69C7 /* Controllers */,
+				92CD7B6718F2AF5B002F69C7 /* Models */,
+				92CD7B6818F2AF5B002F69C7 /* Utils */,
+				92CD7B6918F2AF5B002F69C7 /* Views */,
 				92CD7B1D18F16D2D002F69C7 /* CTAppDelegate.h */,
 				92CD7B1E18F16D2D002F69C7 /* CTAppDelegate.m */,
 				92CD7B2318F16D2D002F69C7 /* Images.xcassets */,
@@ -151,6 +164,46 @@
 				92CD7B3418F16D2D002F69C7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92CD7B6518F2AEA4002F69C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92CD7B6618F2AF5B002F69C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				92CD7B6F18F2C04D002F69C7 /* CTListTableViewController.h */,
+				92CD7B7018F2C04D002F69C7 /* CTListTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		92CD7B6718F2AF5B002F69C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92CD7B7218F2C11A002F69C7 /* CTTransaction.h */,
+				92CD7B7318F2C11A002F69C7 /* CTTransaction.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92CD7B6818F2AF5B002F69C7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		92CD7B6918F2AF5B002F69C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92CD7B6A18F2B159002F69C7 /* MainStoryboard.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +284,7 @@
 			files = (
 				92CD7B1918F16D2D002F69C7 /* InfoPlist.strings in Resources */,
 				92CD7B2418F16D2D002F69C7 /* Images.xcassets in Resources */,
+				92CD7B6B18F2B159002F69C7 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CD7B7418F2C11A002F69C7 /* CTTransaction.m in Sources */,
+				92CD7B7118F2C04D002F69C7 /* CTListTableViewController.m in Sources */,
 				92CD7B2218F16D2D002F69C7 /* ClimaTact.xcdatamodeld in Sources */,
 				92CD7B1B18F16D2D002F69C7 /* main.m in Sources */,
 				92CD7B1F18F16D2D002F69C7 /* CTAppDelegate.m in Sources */,
@@ -448,6 +504,7 @@
 				92CD7B3D18F16D2D002F69C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92CD7B3E18F16D2D002F69C7 /* Build configuration list for PBXNativeTarget "ClimaTactTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +513,7 @@
 				92CD7B4018F16D2D002F69C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

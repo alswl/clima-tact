@@ -7,6 +7,8 @@
 //
 
 #import "CTAppDelegate.h"
+#import "CTTransaction.h"
+#import "CTListTableViewController.h"
 
 @implementation CTAppDelegate
 
@@ -16,10 +18,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    //[self.window makeKeyAndVisible];
+    
+    self.transactions = [NSMutableArray arrayWithCapacity:20];
+
+    CTTransaction *transaction;
+    transaction = [[CTTransaction alloc] init];
+    transaction.desc = @"买菜";
+    transaction.value_number = 123.0;
+    [self.transactions addObject:transaction];
+    
+    transaction = [[CTTransaction alloc] init];
+    transaction.desc = @"吃饭";
+    transaction.value_number = 180.32;
+    [self.transactions addObject:transaction];
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *navigationController = [tabBarController viewControllers][0];
+    CTListTableViewController *listTableViewController = [navigationController viewControllers][0];
+    listTableViewController.transactions = self.transactions;
+    
     return YES;
 }
 
